@@ -1,0 +1,9 @@
+{
+  "name": "github-repo-setup-test",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.18.0",
+  "scripts": {
+    "test": "node --test"
+  }
+}
