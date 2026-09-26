@@ -7,8 +7,12 @@ updates:
     cooldown:
       default-days: 7 # let new releases age a week (security updates skip this)
     groups:
-      github-actions:
+      github-actions-patch:
         patterns: ["*"]
+        update-types: [patch]
+      github-actions-minor-and-major:
+        patterns: ["*"]
+        update-types: [minor, major]
   - package-ecosystem: npm
     directory: /
     schedule:
@@ -16,6 +20,9 @@ updates:
     cooldown:
       default-days: 7 # let new releases age a week (security updates skip this)
     groups:
-      npm-minor-and-patch:
+      npm-patch:
         patterns: ["*"]
-        update-types: [minor, patch]
+        update-types: [patch]
+      npm-minor:
+        patterns: ["*"]
+        update-types: [minor]
